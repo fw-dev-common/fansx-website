@@ -1,0 +1,8 @@
+usable port:
+18000 - 19000
+
+url:
+connect-dev31.d.fanswifi.com
+
+if use port 18600
+connect-dev31.d.fanswifi.com:18600
