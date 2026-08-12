@@ -18,7 +18,17 @@ body{background:var(--bg);color:var(--black);font-family:'DM Sans',-apple-system
 .brand img{height:26px;width:auto;display:block}
 .top a.lang{font-size:.85rem;color:var(--grey);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:5px 14px}
 .top a.lang:hover{color:var(--orange);border-color:var(--orange)}
-main{max-width:820px;margin:0 auto;padding:48px 24px 80px}
+main{max-width:1080px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+.side{position:sticky;top:24px}
+.side .cap{font-family:'Outfit',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+.side ul{list-style:none}
+.side li{margin:2px 0}
+.side a{display:block;padding:6px 10px;border-radius:7px;font-size:.88rem;color:var(--grey);text-decoration:none;line-height:1.35}
+.side a:hover{color:var(--orange);background:var(--soft)}
+.side a.cur{color:var(--orange);background:var(--soft);font-weight:600}
+.doc{min-width:0}
+main>.doc:only-child{grid-column:1/-1;max-width:820px}
+@media(max-width:820px){main{grid-template-columns:1fr;gap:0}.side{position:static;border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-bottom:32px}}
 .crumb{font-size:.8rem;color:var(--grey);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
 .crumb a{color:inherit;text-decoration:none}
 .crumb a:hover{color:var(--orange)}
@@ -59,6 +69,8 @@ footer{border-top:1px solid var(--line)}
 <a class="lang" href="../">English</a>
 </div></div>
 <main>
+<aside class="side"><div class="cap">法律文件</div><ul><li><a href="/legal/terms/zh-hant/">客戶服務條款</a></li><li><a href="/legal/dpa/zh-hant/">資料處理協議</a></li><li><a class="cur" href="/legal/acceptable-use/zh-hant/">可接受使用政策</a></li><li><a href="/legal/fair-use/zh-hant/">合理使用政策</a></li><li><a href="/legal/ai-addendum/zh-hant/">人工智能服務附錄</a></li><li><a href="/legal/sla/zh-hant/">服務水平協議</a></li><li><a href="/legal/privacy/zh-hant/">私隱政策</a></li><li><a href="/legal/website-terms/zh-hant/">網站使用條款</a></li></ul></aside>
+<div class="doc">
 <div class="crumb"><a href="/legal/">FansX &middot; 法律文件</a></div>
 <h1>可接受使用政策</h1>
 <p class="meta"><strong>版本 1.0</strong> &middot; 生效日期 2026 年 8 月 12 日</p>
@@ -96,6 +108,7 @@ footer{border-top:1px solid var(--line)}
 <hr>
 <blockquote>本文件為 FansX Limited《Acceptable Use Policy》的中文譯本，僅供參考之用。中英文本如有歧義，概以 <strong>英文本為準</strong>。（見一般條款第 17.6 條。）</blockquote>
 </article>
+</div>
 </main>
 <footer><div class="foot-in">
 <div>© 2026 FansX Limited · 6/F, Core C, Cyberport 3, 100 Cyberport Road, Pok Fu Lam, Hong Kong</div>

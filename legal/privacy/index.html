@@ -18,7 +18,17 @@ body{background:var(--bg);color:var(--black);font-family:'DM Sans',-apple-system
 .brand img{height:26px;width:auto;display:block}
 .top a.lang{font-size:.85rem;color:var(--grey);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:5px 14px}
 .top a.lang:hover{color:var(--orange);border-color:var(--orange)}
-main{max-width:820px;margin:0 auto;padding:48px 24px 80px}
+main{max-width:1080px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+.side{position:sticky;top:24px}
+.side .cap{font-family:'Outfit',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:10px}
+.side ul{list-style:none}
+.side li{margin:2px 0}
+.side a{display:block;padding:6px 10px;border-radius:7px;font-size:.88rem;color:var(--grey);text-decoration:none;line-height:1.35}
+.side a:hover{color:var(--orange);background:var(--soft)}
+.side a.cur{color:var(--orange);background:var(--soft);font-weight:600}
+.doc{min-width:0}
+main>.doc:only-child{grid-column:1/-1;max-width:820px}
+@media(max-width:820px){main{grid-template-columns:1fr;gap:0}.side{position:static;border:1px solid var(--line);border-radius:10px;padding:14px 14px 8px;margin-bottom:32px}}
 .crumb{font-size:.8rem;color:var(--grey);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
 .crumb a{color:inherit;text-decoration:none}
 .crumb a:hover{color:var(--orange)}
@@ -59,6 +69,8 @@ footer{border-top:1px solid var(--line)}
 <a class="lang" href="zh-hant/">中文</a>
 </div></div>
 <main>
+<aside class="side"><div class="cap">Legal documents</div><ul><li><a href="/legal/terms/">Customer Terms of Service</a></li><li><a href="/legal/dpa/">Data Processing Agreement</a></li><li><a href="/legal/acceptable-use/">Acceptable Use Policy</a></li><li><a href="/legal/fair-use/">Fair Use Policy</a></li><li><a href="/legal/ai-addendum/">AI Services Addendum</a></li><li><a href="/legal/sla/">Service Level Agreement</a></li><li><a class="cur" href="/legal/privacy/">Privacy Policy</a></li><li><a href="/legal/website-terms/">Website Terms of Use</a></li></ul></aside>
+<div class="doc">
 <div class="crumb"><a href="/legal/">FansX &middot; Legal</a></div>
 <h1>Privacy Policy</h1>
 <p class="meta"><strong>Version 1.0</strong> &middot; Effective 12 August 2026</p>
@@ -98,6 +110,7 @@ footer{border-top:1px solid var(--line)}
 <p>11.2 Where this Policy is published in English and Chinese, the English version prevails.</p>
 <hr>
 </article>
+</div>
 </main>
 <footer><div class="foot-in">
 <div>© 2026 FansX Limited · 6/F, Core C, Cyberport 3, 100 Cyberport Road, Pok Fu Lam, Hong Kong</div>
